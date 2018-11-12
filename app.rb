@@ -26,13 +26,13 @@ class App < Sinatra::Base
   end
 
   get '/:operation/:number1/:number2' do
-    if params[:operation] == "divide"
+    if params[:operation] == divide
       @product = params[:number1].to_i / params[:number2].to_i
-    elsif params[:operation] == "add"
+    elsif params[:operation] == add
       @product = params[:number1].to_i + params[:number2].to_i
-    elsif params[:operation] == "substract"
+    elsif params[:operation] == substract
       @product = params[:number1].to_i - params[:number2].to_i
-    elsif params[:operation] == "multiply"
+    elsif params[:operation] == multiply
       @product = params[:number1].to_i * params[:number2].to_i
     end
     "#{@product}"
