@@ -35,6 +35,6 @@ class App < Sinatra::Base
     elsif params[:operation] == 'multiply'
       @product = params[:number1].to_i * params[:number2].to_i
     end
+    "#{@product}"
   end
-  "#{@product}"
 end
